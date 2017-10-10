@@ -1,0 +1,16 @@
+20171010
+repaso de operaciones de git
+configuracion inicial:
+git config --global user.name jrdx86
+git config --global user.email jrdx86@gmail.com
+git config --global push.defaul simple
+
+clonado:
+git clone https://github.com/jrdx86/ed.git
+
+nueva versión:
+git add diario.txt (marca el fichero diario.txt)
+git commit -m "Resumen de la nueva versión" (incluye los marcados)
+
+publicación en remoto:
+git push
