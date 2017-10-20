@@ -1,0 +1,53 @@
+[1mdiff --git a/HolaMundo/bin/.gitignore b/HolaMundo/bin/.gitignore[m
+[1mdeleted file mode 100644[m
+[1mindex cf1db2e..0000000[m
+[1m--- a/HolaMundo/bin/.gitignore[m
+[1m+++ /dev/null[m
+[36m@@ -1 +0,0 @@[m
+[31m-/org/[m
+[1mdiff --git a/JAdivina/src/org/institutoserpis/ed/Adivina.java b/JAdivina/src/org/institutoserpis/ed/Adivina.java[m
+[1mindex 03164bd..148c053 100644[m
+[1m--- a/JAdivina/src/org/institutoserpis/ed/Adivina.java[m
+[1m+++ b/JAdivina/src/org/institutoserpis/ed/Adivina.java[m
+[36m@@ -10,22 +10,30 @@[m [mpublic class Adivina {[m
+ 		Random random = new Random();[m
+ 	    int numeroAleatorio = random.nextInt(1000) + 1;[m
+ 		Scanner scanner = new Scanner(System.in);[m
+[32m+[m[41m		[m
+[32m+[m		[32mint contadorDeIntentos = 1;[m
+[32m+[m[41m		[m
+ 		System.out.println("Numero aleatorio="+ numeroAleatorio);[m
+[31m-		System.out.print("Adivina el número de entre 1 a 1000:");[m
+[32m+[m		[32mSystem.out.printf("Adivina el número de entre 1 a 1000[intento %s] :",[m
+[32m+[m				[32mcontadorDeIntentos);[m
+ 		[m
+ 		String numero = scanner.nextLine();[m
+ 		int numeroIntroducido = Integer.parseInt(numero);//convertir el string en numero manualmente para evitar errores con los espacios.[m
+ 		while (numeroIntroducido != numeroAleatorio) {//!= se lee como distinto, si es distinto entrara en el bucle[m
+[32m+[m			[32mcontadorDeIntentos++;[m
+ 			if(numeroAleatorio < numeroIntroducido) {[m
+[31m-				System.out.print("Es menor. Vuelve a intentarlo:" );[m
+[32m+[m				[32mSystem.out.printf("Es menor que ese. Vuelve a intentarlo: [intento %s]",[m
+[32m+[m						[32m+ contadorDeIntentos);[m
+ 			[m
+ 			}[m
+ 			else [m
+[31m-				System.out.print("Es mayor. Intentalo otra vez:");[m
+[32m+[m				[32mSystem.out.printf("Es mayor que ese. Intentalo otra vez:[intento %s]",[m
+[32m+[m					[32m+ contadorDeIntentos);[m
+ 			numero = scanner.nextLine();[m
+ 			numeroIntroducido = Integer.parseInt(numero);[m
+ 		}[m
+[31m-		System.out.println("Enhorabuena. Has acertado, eres un maquina.");		[m
+[32m+[m		[32mSystem.out.printf("Enhorabuena. Has acertado en %s %s.", contadorDeIntentos,[m[41m [m
+[32m+[m				[32mcontadorDeIntentos == 1?"intento":"intentos");[m
+ 	}[m
+ [m
+ 	}		[m
+[1mdiff --git a/Jsuma/bin/.gitignore b/Jsuma/bin/.gitignore[m
+[1mdeleted file mode 100644[m
+[1mindex cf1db2e..0000000[m
+[1m--- a/Jsuma/bin/.gitignore[m
+[1m+++ /dev/null[m
+[36m@@ -1 +0,0 @@[m
+[31m-/org/[m
