@@ -32,7 +32,7 @@ public class Adivina {
 			numero = scanner.nextLine();
 			numeroIntroducido = Integer.parseInt(numero);
 		}
-		System.out.printf("Enhorabuena. Has acertado en %s %s.", contadorDeIntentos, 
+		System.out.printf("Enhorabuena. Has acertado en %s %s.\n", contadorDeIntentos, 
 				contadorDeIntentos == 1?"intento":"intentos");
 	}
 
