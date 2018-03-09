@@ -1,16 +1,16 @@
 ﻿using System;
 using Gtk;
 
-namespace Cvector
+public partial class MainWindow: Gtk.Window
 {
-	class MainClass
+	public MainWindow () : base (Gtk.WindowType.Toplevel)
 	{
-		public static void Main (string[] args)
-		{
-			Application.Init ();
-			MainWindow win = new MainWindow ();
-			win.Show ();
-			Application.Run ();
-		}
+		Build ();
+	}
+
+	protected void OnDeleteEvent (object sender, DeleteEventArgs a)
+	{
+		Application.Quit ();
+		a.RetVal = true;
 	}
 }
